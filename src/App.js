@@ -7,6 +7,15 @@ import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Login from './components/Auth/Login';
 import Registration from './components/Auth/Registration';
+import { useTheme } from "./context/ThemeContext";
+import StockChart from './components/Charts/BarChart';
+import LineChart from './components/Charts/LineChart';
+import DoughnutChart from './components/Charts/DoughnutChart';
+import DashboardCustomizable from './components/DashboardCustomizable';
+import Settings from './components/Settings';
+import {UserSettingsProvider} from './context/UserSettingsContext'
+import HChart from './components/Charts/HighChart'
+import StockMarketData from './components/Stocks/StockMarketData'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -15,17 +24,25 @@ function App() {
     setOpenSidebarToggle(!openSidebarToggle)
   }
 
+  const { theme } = useTheme();
+
   return (
     <Router>
-    <div className='grid-container'>
+    <div className='grid-container' style={{ backgroundColor: theme.background, color: theme.text }}>
+    <UserSettingsProvider>
       <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/stocks' element={<StockMarketData/>}/>
+          <Route path='/charts' element={<HChart/>}/>
+          <Route path='/dashboard' element={<DashboardCustomizable/>}/>
+          <Route path='/settings' element={<Settings/>}/>
           <Route path='*' element={<PageNotFound/>}/>
       </Routes>
+      </UserSettingsProvider>
     </div>
     </Router>
   )

@@ -1,0 +1,65 @@
+.stock-container {
+    grid-area: main;
+  }
+  
+  header {
+    color: #beb4b4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  button.active {
+    background-color: #45a049;
+  }
+  
+  main {
+    margin: 20px;
+  }
+
+
+  /* StockMarketList.css */
+
+.stock-list-container {
+    margin-top: 20px;
+  }
+  
+  .stock-list-heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .stock-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .stock-item-value {
+    flex: 1; /* Take up remaining space */
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  
+  

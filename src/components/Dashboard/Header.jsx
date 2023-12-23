@@ -6,11 +6,15 @@ import {
   BsSearch,
   BsJustify,
   BsGripVertical,
+  BsBrightnessHighFill
 } from "react-icons/bs";
 
+import { useTheme } from "../../context/ThemeContext";
+
 function Header({ OpenSidebar }) {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <header className="header">
+    <header className="header" style={{ backgroundColor: theme.background, color: theme.text }}>
       <div className="menu-icon">
         <BsJustify className="icon" onClick={OpenSidebar} />
       </div>
@@ -18,6 +22,7 @@ function Header({ OpenSidebar }) {
         <BsSearch className="icon" />
       </div>
       <div className="header-right">
+      <BsBrightnessHighFill onClick={toggleTheme} className="icon"/>
         <BsFillEnvelopeFill className="icon" />
         <BsFillBellFill className="icon" />
         <BsGripVertical className="icon" />

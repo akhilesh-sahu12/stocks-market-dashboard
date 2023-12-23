@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../context/ThemeContext';
 import {
   BsFillEnvelopeFill,
   BsFillArchiveFill,
@@ -12,12 +13,13 @@ import {
   BsBarChartLine
 } from "react-icons/bs";
 
+
 function Sidebar({ openSidebarToggle, OpenSidebar }) {
+  const { theme } = useTheme();
   return (
     <aside
       id="sidebar"
-      className={openSidebarToggle ? "sidebar-responsive" : ""}
-    >
+      className={openSidebarToggle ? "sidebar-responsive" : "" } style={{ backgroundColor: theme.background, color: theme.text }}>
       <div className="sidebar-title">
       <Link to="/">
         <div className="sidebar-brand">
@@ -61,7 +63,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
         <li className="sidebar-list-item">
-          <Link to="/setting">
+          <Link to="/settings">
             <BsFillGearFill className="icon" /> Settings
           </Link>
         </li>
