@@ -61,4 +61,25 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .chart-container {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-area: main;
+  }
+
+  .chart-container {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
   

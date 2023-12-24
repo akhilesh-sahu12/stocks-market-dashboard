@@ -1,6 +1,7 @@
-// components/Auth/Register/Register.js
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../Auth/Registration.css"; 
 
 const Registration = () => {
@@ -31,10 +32,21 @@ const Registration = () => {
       password: "",
       confirmPassword: "",
     });
+
+    // Show registration success notification
+    toast.success("Registration successful! Please login.", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   };
 
   return (
     <div className="Register">
+      <ToastContainer />
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username:</label>
@@ -88,4 +100,3 @@ const Registration = () => {
 };
 
 export default Registration;
-
