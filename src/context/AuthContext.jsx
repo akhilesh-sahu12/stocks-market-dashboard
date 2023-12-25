@@ -6,6 +6,16 @@ export const AuthProvider = ({ children }) => {
   // State to track user authentication status
   const [authenticated, setAuthenticated] = useState(false);
 
+  // State to store a list of registered users
+  const [registeredUsers, setRegisteredUsers] = useState([]);
+
+  // Function to register a new user
+  const registerUser = (userData) => {
+    // Add the new user to the list
+    setRegisteredUsers((prevUsers) => [...prevUsers, userData]);
+    console.log('User registered successfully:', userData);
+  };
+
   // Function to log in the user
   const userLogin = () => {
     setAuthenticated(true);
@@ -20,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   // Provide authentication state and functions to children components
   return (
-    <AuthContext.Provider value={{ authenticated, userLogin, logout }}>
+    <AuthContext.Provider value={{ authenticated, userLogin, logout, registerUser }}>
       {children}
     </AuthContext.Provider>
   );

@@ -11,7 +11,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const { userLogin, authenticated } = useAuth();
+  const { userLogin} = useAuth();
   const [logged, setLogged] = useState(false);
 
   const handleChange = (e) => {

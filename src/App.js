@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Dashboard/Header';
 import Sidebar from './components/Dashboard/Sidebar';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import PageNotFound from './components/PageNotFound';
 import Login from './components/Auth/Login';
 import Registration from './components/Auth/Registration';
@@ -19,6 +19,8 @@ import StockMarketData from './components/Stocks/StockMarketData'
 import { AuthProvider } from './context/AuthContext';
 import AuthGuard from './guards/AuthGuard';
 import Contact from './components/Contact';
+import NewsFetcher from './components/News/NewsFetcher';
+import  SearchStock from './components/Home/SearchStock';
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
