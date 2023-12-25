@@ -1,0 +1,11 @@
+/* SymbolSearch.css */
+
+.search-list {
+    position: relative;
+    grid-area: main;
+  }
+  .search-option{
+    width: 50%;
+  }
+  
+ 
