@@ -1,0 +1,26 @@
+.layout-dashboard{
+  grid-area: main;
+}
+.layout {
+    background: #f0f0f0;
+    padding: 15px;
+    
+  }
+  
+  .widget {
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .widget-header {
+    background: #eee;
+    padding: 5px;
+    text-align: center;
+    cursor: move;
+  }
+  
+  .widget-content {
+    padding: 10px;
+  }
+  

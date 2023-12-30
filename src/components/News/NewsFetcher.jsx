@@ -3,7 +3,7 @@ import NewsList from '../News/NewsList';
 import '../News/NewsList.css' // Import your CSS file
 
 const BASE_URL='https://api.iex.cloud/v1';
-const API_KEY= 'pk_ddeddb3e6e0c4da8b1211716c064c37e';
+const API_KEY= 'pk_9e697d85bc3446ba8c552b18e85ff4bc';
 
 const NewsFetcher = ({symbol}) => {
   const [newsData, setNewsData] = useState([]);

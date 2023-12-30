@@ -1,0 +1,42 @@
+/* UserSettings.css */
+
+.user-settings-container {
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(96, 86, 156);
+    border-radius: 8px;
+    grid-area: main;
+  }
+  
+  .user-settings-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .setting-label {
+    font-size: 16px;
+  }
+  
+  .setting-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-label {
+    margin-left: 10px;
+  }
+  
+  .theme-select {
+    padding: 8px;
+    font-size: 16px;
+  }
+  

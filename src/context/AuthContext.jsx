@@ -9,6 +9,9 @@ export const AuthProvider = ({ children }) => {
   // State to store a list of registered users
   const [registeredUsers, setRegisteredUsers] = useState([]);
 
+  // state to store current user
+  const [currentUser, setCurrentUser]=useState({});
+
   // Function to register a new user
   const registerUser = (userData) => {
     // Add the new user to the list
@@ -28,9 +31,15 @@ export const AuthProvider = ({ children }) => {
     console.log('User is logged out.'); // Log a message for debugging
   };
 
+  // Function to login user
+  const userLoginDetails=(user)=>{
+    setCurrentUser(user);
+    console.log(currentUser, "has been successfully logged in");
+  }
+
   // Provide authentication state and functions to children components
   return (
-    <AuthContext.Provider value={{ authenticated, userLogin, logout, registerUser }}>
+    <AuthContext.Provider value={{ authenticated, userLogin, logout, registerUser, registeredUsers, userLoginDetails, currentUser}}>
       {children}
     </AuthContext.Provider>
   );

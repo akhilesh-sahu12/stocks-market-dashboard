@@ -32,6 +32,7 @@ function App() {
   const { theme } = useTheme();
 
   return (
+    <UserSettingsProvider>
     <AuthProvider>
     <Router>
     <div className='grid-container' style={{ backgroundColor: theme.background, color: theme.text }}>
@@ -53,6 +54,7 @@ function App() {
     </div>
     </Router>
     </AuthProvider>
+    </UserSettingsProvider>
   )
 }
 

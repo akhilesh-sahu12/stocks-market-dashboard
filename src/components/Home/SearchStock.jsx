@@ -7,7 +7,7 @@ import useStockData from '../../hooks/useStockData'; // Import data fetching hoo
 import NewsFetcher from "../News/NewsFetcher";
 
 const SymbolSearch = ({ symbolData, onSelectSymbol }) => {
-  const [searchInput, setSearchInput] = useState('aapl');
+  const [searchInput, setSearchInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
   const handleInputChange = (e) => {

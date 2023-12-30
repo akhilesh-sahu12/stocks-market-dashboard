@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
+      <h1 className='heading-contact'>Contact Us</h1>
       <p>If you have any questions or feedback, feel free to reach out to us!</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -62,7 +62,7 @@ const Contact = () => {
           required
         ></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit" style={{margin:'auto'}}>Submit</button>
       </form>
     </div>
   );

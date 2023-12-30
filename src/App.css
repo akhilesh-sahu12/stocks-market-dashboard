@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-color: #1d2634;
   color: #9e9ea4;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .icon {
@@ -16,7 +16,8 @@ body {
   line-height: 1px;
   font-size: 26px;
 }
-.icon, .icon_header {
+.icon,
+.icon_header {
   margin: 5px 5px;
 }
 
@@ -32,10 +33,10 @@ body {
   grid-template-columns: 260px 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    'sidebar header header header'
-    'sidebar main main main';
+    "sidebar header header header"
+    "sidebar main main main";
   min-height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* Header  */
@@ -116,8 +117,7 @@ body {
 
 /* End Sidebar  */
 
-
-/* Main  */  
+/* Main  */
 .main-container {
   grid-area: main;
   overflow-y: auto;
@@ -178,16 +178,15 @@ body {
 
 /* End Main  */
 
-
 /* Medium <= 992px */
-  
+
 @media screen and (max-width: 992px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 3fr;
     grid-template-areas:
-      'header'
-      'main';
+      "header"
+      "main";
   }
 
   #sidebar {
@@ -203,7 +202,7 @@ body {
   }
 }
 /* Small <= 768px */
-  
+
 @media screen and (max-width: 768px) {
   .main-cards {
     grid-template-columns: 1fr;
@@ -224,17 +223,20 @@ body {
     display: none;
   }
 }
- /* Contact */
-.contact-container{
+/* Contact */
+.contact-container {
   grid-area: main;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 300px;
+  margin: auto;
+  padding: 28px 21px 20px 16px;
+  box-shadow: 0 0 10px rgb(96, 86, 156);
+  border-radius: 8px;
 }
 
 .contact-container h1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .contact-container p {
@@ -269,4 +271,3 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-
