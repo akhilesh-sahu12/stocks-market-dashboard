@@ -5,8 +5,10 @@ import './SymbolSearch.css';
 import StockBarChart from '../Stocks/Charts/StockBarChart';
 import useStockData from '../../hooks/useStockData'; // Import data fetching hook
 import NewsFetcher from "../News/NewsFetcher";
+import { useTheme } from '../../context/ThemeContext';
 
 const SymbolSearch = ({ symbolData, onSelectSymbol }) => {
+  const { theme } = useTheme();
   const [searchInput, setSearchInput] = useState('');
   const [suggestions, setSuggestions] = useState([]);
 
@@ -27,7 +29,7 @@ const SymbolSearch = ({ symbolData, onSelectSymbol }) => {
   };
 
   return (
-    <div className='search-option'>
+    <div className='search-option' style={{ backgroundColor: theme.background, color: theme.text }}>
       <input
         type="text"
         value={searchInput}
@@ -48,6 +50,7 @@ const SymbolSearch = ({ symbolData, onSelectSymbol }) => {
 };
 
 const SearchStock = () => {
+  const { theme } = useTheme();
   const [selectedSymbol, setSelectedSymbol] = useState(null);
 
   // Sample symbol data
@@ -62,7 +65,7 @@ const SearchStock = () => {
   const stockData = useStockData(selectedSymbol?.symbol);
 
   return (
-    <div className='search-list'>
+    <div className='search-list' style={{ backgroundColor: theme.background, color: theme.text }}>
       <h1>Search Stocks & News</h1>
       <SymbolSearch symbolData={symbolData} onSelectSymbol={handleSelectSymbol} />
 
